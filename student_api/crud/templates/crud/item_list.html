@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item List</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    <ul>
+
+        {% for item in object %}
+            <li>{{ item.id }}</li>
+            <li>{{ item.name}}</li>
+
+        {% empty %}
+            <li>No items available.</li>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'item_create' %}">Create New Item</a>
+</body>
+</html>

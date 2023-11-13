@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create/Update Item</title>
+</head>
+<body>
+    <h1>Create/Update Item</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="id_photo">Choose Photo:</label>
+        <input type="file" name="photo" id="id_photo">
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'item_list' %}">Back to Item List</a>
+</body>
+</html>
